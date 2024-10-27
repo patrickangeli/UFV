@@ -1,0 +1,45 @@
+% Arquivo calculo_comandos.sty
+\ProvidesPackage{calculo_comandos}
+
+\newcommand{\mathexpr}[1]{\[
+#1
+\]}
+
+% Derivada: primeira e segunda
+\newcommand{\deriv}[2]{\frac{d #1}{d #2}}
+\newcommand{\derivII}[2]{\frac{d^2 #1}{d #2^2}}
+
+% Derivada parcial: primeira e segunda
+\newcommand{\pderiv}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pderivII}[2]{\frac{\partial^2 #1}{\partial #2^2}}
+
+% Integral definida e indefinida
+\newcommand{\integral}[2]{\int #1 \, d#2}
+\newcommand{\integraldef}[4]{\int_{#1}^{#2} #3 \, d#4}
+
+% Limite
+\newcommand{\limite}[2]{\lim_{#1 \to #2}}
+
+% Somatório e produtório
+\newcommand{\soma}[2]{\sum_{#1}^{#2}}
+\newcommand{\produtoria}[2]{\prod_{#1}^{#2}}
+
+% Gradiente, divergente e rotacional (para cálculo vetorial)
+\newcommand{\grad}{\nabla}
+\newcommand{\diverg}{\nabla \cdot}
+\newcommand{\rot}{\nabla \times}
+
+% Norma de um vetor
+\newcommand{\norma}[1]{\left\lVert #1 \right\rVert}
+
+% Parênteses grandes e colchetes grandes
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\colchete}[1]{\left[ #1 \right]}
+
+% Exponencial e logaritmos
+\newcommand{\expo}[1]{e^{#1}}
+\newcommand{\logbase}[2]{\log_{#1} \left( #2 \right)}
+
+\newcommand{\ihat}{\hat{\textbf{\i}}}
+\newcommand{\jhat}{\hat{\textbf{\j}}}
+\newcommand{\khat}{\hat{\textbf{\k}}}

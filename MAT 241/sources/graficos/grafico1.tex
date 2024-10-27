@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+    % Desenhar eixos
+    \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+    \draw[->] (0,-3) -- (0,3) node[above] {$y$};
+
+    % Desenhar ponto (a, b)
+    \filldraw[black] (2,1) circle (2pt) node[anchor=west] {Ponto ($2$, $1$)};
+
+    % Marcar a origem
+    \filldraw[black] (0,0) circle (2pt) node[anchor=north east] {Origem};
+
+    % Descrição do espaço
+    \node[anchor=north] at (0,-3.5) {$\mathbb{R}^2$};
+\end{tikzpicture}
