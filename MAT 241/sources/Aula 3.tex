@@ -4,9 +4,9 @@ Exemplo: \mathexpr{\overrightarrow{u} = <4,0,3> e \overrightarrow{v} = <-2,1,5>}
 Determine: \\
 \begin{itemize}
     \item[a.] \mathexpr{}
-    \item[b. ] \mathexpr{\overrightarrow{u} - 2 \overrightarrow{v}} \\
+    \item[b. ] $\overrightarrow{u} - 2 \overrightarrow{v}$
     
-    \mathexpr{< 4,0,3> + (-2) <-2,1,5>} 
+    $< 4,0,3> + (-2) <-2,1,5> = \\ < 4,0,3> + <4,-2,10> =$ \\ $<8,-2,-7>$ 
 \end{itemize}
 
 \subsubsection{Propriedades:}
@@ -28,18 +28,54 @@ Então: \\
 \begin{itemize}
     \item[a.] $\norma{\overrightarrow{u}} \geq$ e $\norma{\overrightarrow{u}} = 0 \leftrightarrow \norma{u} = \norma{0}$
     \item[b.] $\norma{k \overrightarrow{u}} = |k| \norma{\overrightarrow{u}}$ 
-    \item[c.] $ \|\vec{u} + \vec{v}\| \leq \|\vec{u}\| + \|\vec{v}\| \quad (\text{desigualdade do triângulo}$ 
+    \item[c.] $ \|\vec{u} + \vec{v}\| \leq \|\vec{u}\| + \|\vec{v}\| \quad (\text{desigualdade do triângulo})$ 
 \end{itemize}
 
-$\text{Obs: Dado } \vec{u} = \vec{0}, \text{posso obter um novo vetor que é nulo.}$
+$\text{Obs: Dado } \vec{u} = \vec{0}, \text{posso obter um novo vetor que tem a mesma dimensão.}$
 
-\begin{align*}
-    &\text{Temos } \vec{u} = \frac{\vec{u}}{\|\vec{u}\|}, \text{que} \\
-    &\|\vec{u}\| = 1 \implies \|\lambda \vec{u}\| = \|\vec{u}\| = K \|\vec{u}\| \\
-    &= 1 \implies K = \frac{1}{\|\vec{u}\|}
-\end{align*}
+% \begin{align*}
+%     &\text{Temos } \vec{u} = \frac{\vec{u}}{\|\vec{u}\|}, \text{que} \\
+%     &\|\vec{u}\| = 1 \implies \|\lambda \vec{u}\| = \|\vec{u}\| = K \|\vec{u}\| \\
+%     &= 1 \implies K = \frac{1}{\|\vec{u}\|}
+% \end{align*}
 
+Vamos corrigir a questão considerando um vetor \(\vec{u} \neq \vec{0}\):
 
+\[
+\vec{u} = \frac{\vec{u}}{\|\vec{u}\|}
+\]
+
+Aqui, \(\|\vec{u}\| \neq 0\), e a norma de \(\vec{u}\) é 1:
+
+\[
+\|\vec{u}\| = 1
+\]
+
+Se multiplicarmos \(\vec{u}\) por um escalar \(\lambda\), a norma do novo vetor \(\lambda \vec{u}\) será:
+
+\[
+\|\lambda \vec{u}\| = |\lambda| \|\vec{u}\|
+\]
+
+Se \(\|\vec{u}\| = 1\), então:
+
+\[
+\|\lambda \vec{u}\| = |\lambda|
+\]
+
+Portanto, a expressão correta é:
+
+\[
+|\lambda| = \frac{1}{\|\vec{u}\|}
+\]
+
+Mas, como \(\|\vec{u}\| = 1\), temos:
+
+\[
+|\lambda| = 1
+\]
+
+\paragraph{Notação:}
 Em $\mathbb{R}^3$, demonstremos por:
 \begin{align*}
     \vec{i} &= \langle 1, 0, 0 \rangle \\
@@ -47,19 +83,45 @@ Em $\mathbb{R}^3$, demonstremos por:
     \vec{k} &= \langle 0, 0, 1 \rangle
 \end{align*}
 
-Dai, seja $<x, y, z> \in \mathbb{R}^3$ então: TA ERRADO
+Dai, seja $<x, y, z> \in \mathbb{R}^3$ então:
 
-$\langle \vec{x}, \vec{x} \rangle = x\langle \vec{e}_1, \vec{e}_1 \rangle + y\langle \vec{e}_1, \vec{e}_1 \rangle + z\langle \vec{e}_1, \vec{e}_1 \rangle$
+$< x,y,z > = x<1,0,0> + y <0,1,0> + <0,0,1> = x\vec{i} + y \vec{j} + z \vec{k}$
 
-$\vec{e}_i \in \{(1, 0, 0), (0, 1, 0), (0, 0, 1)\}$
+% $\langle \vec{x}, \vec{x} \rangle = x\langle \vec{e}_1, \vec{e}_1 \rangle + y\langle \vec{e}_1, \vec{e}_1 \rangle + z\langle \vec{e}_1, \vec{e}_1 \rangle$
 
-$\Rightarrow \vec{x} \cdot \vec{x} = x^2 + y^2 + z^2$
+% $\vec{e}_i \in \{(1, 0, 0), (0, 1, 0), (0, 0, 1)\}$
 
-Produto escalar
+% $\Rightarrow \vec{x} \cdot \vec{x} = x^2 + y^2 + z^2$
+
+\subsubsection{Produto escalar}
 
 Def: Sejam $\vec{u} = (u_1, u_2, u_3)$ e $\vec{v} = (v_1, v_2, v_3)$. 
 
-Definimos o produto escalar (interno)
 
+Definimos o produto escalar (interno) de $\vec{u} \text{ por } \vec{v}$ como:
 $\vec{u} \cdot \vec{v} = u_1v_1 + u_2v_2 + u_3v_3$.
+
+\paragraph{Exemplo:} Encontre $\vec{u} \cdot \vec{v}$ em que:
+\begin{itemize}
+    \item[a.] $\vec{u} = <3,5,2>$ e $\vec{v} = <-1,3,0>$ \\
+            $\vec{u} \cdot \vec{v} = 3(-1) + 5(3) + 2(0) = -3 +15 + 0 = 12$
+    \item[b. ]  $\vec{u} = 10 \hat{i} - 4 \hat{j} + 7 \hat{k}$ e $\vec{v} = -2 \hat{i} + \hat{j} + 6 \hat{k}$ \\
+            $\vec{u} \cdot \vec{v} = 10(-2) + (-4)(1) + (7)(6) = -20 -4 + 42 = 18$
+\end{itemize}
+
+\paragraph{Propriedades:} Sejam $\vec{u}, \vec{v} \text{ e } \vec{w}$ vetores de $\mathbb{R}^3$ e $c \in \mathbb{R}$. Então:
+\begin{itemize}
+    \item[a. ] $\vec{u} \cdot \vec{v} = \vec{v} \cdot \vec{u}$
+    \item[b. ] $\vec{u} \cdot (\vec{v} + \vec{w}) = \vec{u} \cdot\vec{v} + \vec{u} \cdot \vec{w} $
+    \item[c. ] $ c (\vec{u} \cdot \vec{v}) = (c \vec{u}) \cdot \vec{v} = \vec{u} \cdot (c \vec{v}) $   
+    \item[d. ] $\vec{u} \cdot \vec{u} = ||\vec{u}||^2$ 
+\end{itemize}
     
+\paragraph{Exemplo:} Dados $\vec{u} = <1,2,-3>$, $\vec{v} = <0,2,4> \text{ e } \vec{w} = <5, -1, 3>$, determine:
+\begin{itemize}
+    \item[a. ] $(\vec{u} \cdot \vec{v}) \vec{w} = (1 \cdot 0 + 2 \cdot 2 + (-3) \cdot 4) \vec{w} = -8 \vec{w} = <-40,8,-24>$
+    \item[b. ] $\vec{u} \cdot (2 \vec{v}) = 2 (\vec{u} \cdot \vec{v} = 2 (-8) = -16)$  
+\end{itemize}
+
+\subsubsection{Angulo entre vetores:}
+\url{https://query.libretexts.org/Idioma_Portugues/Livro%3A_Calculus_(OpenStax)/12%3A_Vetores_no_espa%C3%A7o/12.03%3A_O_produto_Dot}
