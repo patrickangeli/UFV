@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+
+\title{Documento Complementar sobre Vetores e Geometria no Espaço}
+\author{}
+\date{}
+\maketitle
+
+Este documento tem como objetivo complementar o conteúdo apresentado no PDF "P1.pdf", abordando tópicos relevantes para o estudo de vetores e geometria no espaço que não foram incluídos no documento original. As informações aqui apresentadas foram elaboradas com base na conversa anterior e em conceitos comuns de vetores e geometria analítica, utilizando como referência o livro "Cálculo, volume 2" de George B. Thomas, Maurice D. Weir e Joel Hass.
+
+\section{Definições Fundamentais}
+
+\begin{itemize}
+    \item \textbf{Norma de um Vetor:} A norma de um vetor, também conhecida como módulo, representa o seu comprimento ou magnitude. Se \(\mathbf{v} = \langle v_1, v_2, v_3 \rangle\) é um vetor no espaço tridimensional, sua norma é calculada pela seguinte fórmula:
+    \[
+    \|\mathbf{v}\| = \sqrt{v_1^2 + v_2^2 + v_3^2}
+    \]
+    \item \textbf{Versor:} Um versor é um vetor unitário, ou seja, um vetor cuja norma é igual a 1. Para obter o versor de um vetor \(\mathbf{v}\) não nulo, basta dividir \(\mathbf{v}\) pela sua norma:
+    \[
+    \hat{\mathbf{v}} = \frac{\mathbf{v}}{\|\mathbf{v}\|}
+    \]
+    O versor \(\hat{\mathbf{v}}\) possui a mesma direção e sentido de \(\mathbf{v}\), mas com comprimento unitário.
+    \item \textbf{Distância entre Dois Pontos:} A distância entre dois pontos no espaço pode ser calculada utilizando a norma do vetor diferença entre eles. Se \(P_1(x_1, y_1, z_1)\) e \(P_2(x_2, y_2, z_2)\) são dois pontos no espaço, a distância entre eles é dada por:
+    \[
+    d(P_1, P_2) = \|\mathbf{P_1P_2}\| = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}
+    \]
+\end{itemize}
+
+\section{Retas no Espaço}
+
+\begin{itemize}
+    \item \textbf{Representação de Retas:} Uma reta no espaço pode ser representada de diferentes maneiras:
+    \begin{itemize}
+        \item \textbf{Equação Vetorial:} Uma reta que passa por um ponto \(P_0(x_0, y_0, z_0)\) e tem a direção do vetor \(\mathbf{v} = \langle a, b, c \rangle\) pode ser representada pela equação vetorial:
+        \[
+        \mathbf{r}(t) = \mathbf{r}_0 + t\mathbf{v}
+        \]
+        onde \(\mathbf{r}_0 = \langle x_0, y_0, z_0 \rangle\) é o vetor posição de \(P_0\) e \(t\) é um parâmetro real.
+        \item \textbf{Equações Paramétricas:} As equações paramétricas da reta são obtidas a partir da equação vetorial, expressando as coordenadas \(x\), \(y\) e \(z\) em função do parâmetro \(t\):
+        \[
+        x = x_0 + at
+        \]
+        \[
+        y = y_0 + bt
+        \]
+        \[
+        z = z_0 + ct
+        \]
+        \item \textbf{Equações Simétricas:} Se nenhum dos componentes do vetor diretor \(\mathbf{v}\) for nulo, podemos eliminar o parâmetro \(t\) das equações paramétricas, obtendo as equações simétricas da reta:
+        \[
+        \frac{x - x_0}{a} = \frac{y - y_0}{b} = \frac{z - z_0}{c}
+        \]
+    \end{itemize}
+    \item \textbf{Posições Relativas entre Retas:} Duas retas no espaço podem ser:
+    \begin{itemize}
