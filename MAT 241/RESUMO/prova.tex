@@ -1,0 +1,172 @@
+\documentclass{article} % \documentclass{} is the first command in any LaTeX code.  It is used to define what kind of document you are creating such as an article or a book, and begins the document preamble
+
+\usepackage{amsmath} % \usepackage is a command that allows you to add functionality to your LaTeX code
+\usepackage{datetime2}
+\usepackage{calculo_comandos}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{url}
+\usepackage{pgfplots}
+\usepackage{bm}
+
+
+\begin{document}
+
+
+
+\title{Prova Exemplo:}
+
+\begin{itemize}
+    \item[1.] Sejam r e s retas da equações parametricas dada por:
+    \begin{equation}
+    \begin{cases}
+        r:  x= -3 + t  \\
+               y = 4-t, t \in \mathbb{R} \\
+               z = -3 +2t 
+    \end{cases} 
+    \begin{cases}
+        s:  x= -4 -t \\
+            y = 2, t \in R \\
+            z = -5 -2t 
+    \end{cases}       
+    \end{equation}
+
+    \begin{itemize}
+        \item[a. ] Verifique que r e s são concorrentes. 
+        Os vetores direcionais r e s são, respectivamente, $\overrightarrow{v_r} = <1,-1,2> $ e
+    $\overrightarrow{v_s} =  <-1,0,-2>$ 
+    Checando que $\overrightarrow{v_r}$ e $\overrightarrow{v_s}$ não são paralelos.
+    De fato, se:
+    $\overleftrightarrow{V_r} = k \overrightarrow{v_s}$, para algum $k \in \mathbb{R}$, então teriamos: \\
+    $<1,-1,2> = k <-1,0,-2> \leftrightarrow \{ -k = 1 \rightarrow k= -1 \\ 0 = - 1 (impossivel) \\ -2k = 2 \rightarrow{k= -1} $    
+    
+    Portanto, $\overrightarrow{v_r} e \overrightarrow{vs}$ não são paralelos. \\
+    Vamos agora verificar que r e s possuem um ponto comum para isto resolvemos:
+
+    \begin{equation}\label{eq}
+    \begin{cases}
+         -3 + t_1 = -4 -t_2 \rightarrow -3+2 = -4 -t_2 \rightarrow -1+4 = -t_2 \rightarrow t_2 = -3 \\
+            4 - t_1 = 2 \rightarrow -1 t_1 = -2 \rightarrow t_1 = 2 \\
+            -3 + 2t_1 = -5 -2t_2 
+
+    \end{cases}
+    \end{equation}
+    Substituindo $t_1 = 2$ e $t_2 = -3$ na ultima equação de \eqref{eq}, obtemos $-3+2(2) = -4 -2(-3)$. \\
+    Portanto, as retas s e r se cruzam no ponto $-3 +2, 4-2, -3+2*2 = (-1,2,1)$ e assim conluimos que r e s são concorrentes.
+    \item[b.] Determine o ponto de interseção enter r e s. 
+            Resposta: $P = (-1,2,1)$ veja item a.
+    \item[c.] Determine a equação do plano que contem r e s.
+    Para determinar um vetor normal ao plano requerido, basta tomar: \\
+    $\overrightarrow{v_n} = \overrightarrow{v_r} * \overrightarrow{v_s} = $
+%     \begin{equation}    
+%         \left|
+%         \begin{array}{ccc}
+%         \ihat & \jhat & \khat \\
+%         1 & -1 & 2 \\
+%         -1 & 0 & 2
+%         \end{array}
+%        \right| 
+%   \end{equation}
+    Daí, o plano que contem r e s passa por $P=(-1,2,1)$ e é ortogonal a $\overrightarrow{v_n}$. Portanto, tem equação dado por: \\
+    \begin{equation}
+        2(x-(-1)) + 0(y-2) - 1(z-1) = 0 \leftrightarrow 2(x+1) -z+1 = 0 \leftrightarrow 2x - z = -3
+    \end{equation}
+    \end{itemize}
+    \item[2.] Determine dois planos $\pi_1$ e $\pi_2$ formando um angulo de 45º e de tal forma que a interseção ente eles seja a reta r de equações:
+    \begin{equation}
+        r: 
+    \begin{cases}
+        x=-2 \\
+        y=2+t \\
+        z = -1
+    \end{cases}
+    \end{equation}
+    Podemos escolher para $\pi_1$, o plano qie contem $P=(-2,2,-1)$ e que tem vetor normal $\overrightarrow{v_{\pi1}}$ aos vetores. \\
+    $\overrightarrow{v_r} = <0,1,0>$ e $\overrightarrow{v_a} = <1,0,0>$ isto é, \\
+    $\overrightarrow{n_{\pi1}} = \overrightarrow{v_r} * \overrightarrow{v_a} = $
+          % \left|
+        % \begin{array}{ccc}
+        % \ihat & \jhat & \khat \\
+        % 0 & 1 & 0 \\
+        % 1 & 0 & 0
+        % \end{array}
+   %     \right| $ = <0,0,-1>
+   Nesse caso, $\pi_1$ é dado por: \\
+   \begin{equation}
+    \pi_1: 0(x+2) + 0(y-2) -1 (z+1) = 0 \\ -z-1=0
+   \end{equation}
+   Vamos tomar agora para o vetor normal a $\pi_2$, precisamos de um vetor $\overrightarrow{n_{\pi_2}}$ que forme com $\overrightarrow{n_{\pi2}}$ um angulo de 45°, isto é, 
+   \begin{equation}
+    \frac{\sqrt{2}}{2} = \text{cos 45°} = \frac{\overrightarrow{n_{\pi_1}}* \overrightarrow{n_{\pi_2}}}{|| \overrightarrow{n_{\pi_1}}|| \overrightarrow{n_{\pi_2}}||} 
+   \end{equation}
+   \begin {centering}
+   $\frac{<0,0,-1> * <a,b,c>}{\sqrt{0^2+ 0^2 + (-1)^2} * \sqrt{a^2 + b^2 + c^2}} =
+   \frac{-c}{\sqrt{a^2 + b^2 + c^2}}$ e além disso, $\overrightarrow{n_{\pi2}} * \overrightarrow{v_r} = 0 \rightarrow <a,b,c> * <0,1,0> = 0$ .
+    \end{centering} \\
+    Combinando essas restrições, temos: \\
+    \begin{equation}
+        \begin{cases}
+            \frac{-c}{\sqrt{a^2 + b^2+c^2}} \\
+            b = 0                             = \frac{\sqrt{2}}{2}
+        \end{cases}
+    \end{equation}
+
+    Escolhendo: 
+    \begin{equation}
+        \begin{cases}
+            c = - \sqrt{2} \\
+            b= 0 \\
+            c = \sqrt{2} \text{       temos que:}
+        \end{cases}
+    \end{equation}
+
+    $ \overrightarrow{n_{\pi_2}} = < \sqrt{2}, 0, -2 \sqrt{2}> \text{ e } \pi_2: \sqrt{2}(x-(-2)) + 0(y-2) - \sqrt{2}(z+1) = 0 $
+
+%    Seja:
+%    \begin{equation}
+%    \begin{cases}
+%     c = - \sqrt{2} \\
+%     0 = \sqrt{2} \\
+%     a = 0
+%    \end{cases}
+%    \end{equation}
+    \item[3.] Considere as restas r e s de equações dadas por: \\
+    \begin{equation}
+        r:
+        \begin{cases}
+            x = -1 + 2t \\
+            y = -1 + t  \in \mathbb{R} \\
+            z = 2 - t 
+        \end{cases}
+        s:
+        \begin{cases}
+            x = 1 -2t \\
+            y = -2 + 2t  \in \mathbb{R} \\
+            z = 5 + 2t
+        \end{cases}
+    \end{equation}
+    \begin{itemize}
+        \item[a. ] Verifique que r e s são reversas. \\ Solução:
+        baste mostrar que os vetores direcionais não são paralelos e que r e s não tem ponto em comum. 
+        \item[b.] Determine as equações de planos paralelos $\pi_1$ e $\pi_2$ tais que $r \pi_1$ e $s \pi_2$.
+        Solução: O vetor normal a ambos os planos deve ser ortogonal aos vetores direcionais de ambas as retas, assim basta tomar: \\
+        % \left|
+        % \begin{array}{ccc}
+        % \ihat & \jhat & \khat \\
+        % 2 & 1 & -1 \\
+        % -2 & 2 & 2
+        % \end{array}
+   %     \right| $ = <4,-2,6> 
+   Note ainda que: $P_1 = (-1,-1,2) \in \pi_1$ e $P_2 = (1,-2,5)$. Daí, $\pi_1$ e $\pi_2$ são dados por:
+   \begin{equation}
+        \pi_1 : 4(x+1) - 2(y+1) + 6(z-2) = 0 \\
+        \pi_2 : 4(x-1) - 2(y+2) + 6(z-5) = 0
+   \end{equation}
+    \end{itemize}
+    \item[4.]
+    \item[5.]    
+\end{itemize}
+
+
+\end{document}
