@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+
+\section*{Resumo de Cálculo III}
+
+\subsection*{1. Funções de várias variáveis}
+
+Uma função de várias variáveis depende de duas ou mais variáveis independentes. Por exemplo:
+
+$$ f(x,y) = x^2 + y^2 $$
+
+\subsection*{2. Limites e continuidade em várias variáveis}
+
+O limite de uma função de várias variáveis é definido de forma similar ao limite de uma função de uma variável:
+
+$$ \lim_{(x,y) \to (0,0)} \frac{xy}{x^2 + y^2} $$
+
+\subsection*{3. Derivadas parciais e direcionais}
+
+Derivadas parciais são calculadas mantendo as outras variáveis constantes:
+
+$$ \frac{\partial f}{\partial x} = \lim_{h \to 0} \frac{f(x+h,y) - f(x,y)}{h} $$
+$$ \frac{\partial f}{\partial y} = \lim_{h \to 0} \frac{f(x,y+h) - f(x,y)}{h} $$
+
+A derivada direcional é a taxa de variação da função na direção de um vetor unitário u:
+
+$$ D_u f(x,y) = \nabla f(x,y) \cdot u $$
+
+\subsubsection*{3.1 Regra da Cadeia para Derivadas Parciais}
+
+A regra da cadeia para derivadas parciais é usada quando temos uma função composta. Para uma função z = f(x,y), onde x = g(t) e y = h(t), a regra da cadeia é:
+
+$$ \frac{dz}{dt} = \frac{\partial f}{\partial x} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt} $$
+
+Para uma função z = f(x,y), onde x = g(s,t) e y = h(s,t), temos:
+
+$$ \frac{\partial z}{\partial s} = \frac{\partial f}{\partial x} \frac{\partial x}{\partial s} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial s} $$
+$$ \frac{\partial z}{\partial t} = \frac{\partial f}{\partial x} \frac{\partial x}{\partial t} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial t} $$
+
+Esta regra é fundamental para resolver problemas complexos envolvendo funções compostas e é amplamente utilizada em aplicações práticas de cálculo multivariável.
+
+
+\subsection*{4. Gradiente e plano tangente}
+
+O gradiente de uma função é um vetor que contém todas as derivadas parciais da função:
+
+$$ \nabla f(x,y) = \left(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\right) $$
+
+A equação do plano tangente a uma superfície z = f(x,y) no ponto (a,b,f(a,b)) é:
+
+$$ z - f(a,b) = \frac{\partial f}{\partial x}(a,b)(x-a) + \frac{\partial f}{\partial y}(a,b)(y-b) $$
+
+\subsection*{5. Otimização em várias variáveis}
+
+Para encontrar pontos críticos, igualamos todas as derivadas parciais a zero:
+
+$$ \frac{\partial f}{\partial x} = 0, \frac{\partial f}{\partial y} = 0 $$
+
+O teste da segunda derivada para classificação dos pontos críticos:
+
+$$ D = \frac{\partial^2 f}{\partial x^2} \frac{\partial^2 f}{\partial y^2} - \left(\frac{\partial^2 f}{\partial x \partial y}\right)^2 $$
+
+\include{sources/exercicios_P2}
+
+
+
+\end{document}

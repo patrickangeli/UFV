@@ -1,0 +1,146 @@
+\section{Limites de funções de várias variáveis}
+
+\subsection{Exemplo 1}
+\textbf{Problema:} Calcule $\lim_{(x,y) \to (0,0)} \frac{xy}{x^2 + y^2}$
+
+\textbf{Solução:}
+\begin{enumerate}
+\item Analisamos o comportamento da função ao longo de diferentes caminhos.
+\item Caminho 1 (y = x):
+$\lim_{x \to 0} \frac{x^2}{x^2 + x^2} = \lim_{x \to 0} \frac{x^2}{2x^2} = \frac{1}{2}$
+\item Caminho 2 (y = 0):
+$\lim_{x \to 0} \frac{x \cdot 0}{x^2 + 0^2} = 0$
+\item Como obtivemos resultados diferentes, concluímos que o limite não existe.
+\end{enumerate}
+
+\subsection{Exemplo 2}
+\textbf{Problema:} Calcule $\lim_{(x,y) \to (2,2)} (6 - \frac{1}{3}x^2 - \frac{1}{3}y^2)$
+
+\textbf{Solução:}
+\begin{enumerate}
+\item Substituímos diretamente os valores de x e y:
+$\lim_{(x,y) \to (2,2)} (6 - \frac{1}{3}x^2 - \frac{1}{3}y^2) = 6 - \frac{1}{3}(2)^2 - \frac{1}{3}(2)^2 = 6 - \frac{4}{3} - \frac{4}{3} = \frac{10}{3}$
+\item O limite existe e é igual a $\frac{10}{3}$.
+\end{enumerate}
+
+\section{Derivadas parciais}
+
+\subsection{Exemplo 3}
+\textbf{Problema:} Calcule as derivadas parciais de $f(x,y) = x^2y + \sin(xy)$
+
+\textbf{Solução:}
+\begin{enumerate}
+\item Calculamos $\frac{\partial f}{\partial x}$, tratando y como constante:
+$\frac{\partial f}{\partial x} = 2xy + y\cos(xy)$
+\item Calculamos $\frac{\partial f}{\partial y}$, tratando x como constante:
+$\frac{\partial f}{\partial y} = x^2 + x\cos(xy)$
+\end{enumerate}
+
+\subsection{Exemplo 4}
+\textbf{Problema:} Calcule as derivadas parciais de $f(x,y) = x^3 + y^2e^x$
+
+\textbf{Solução:}
+\begin{enumerate}
+\item Calculamos $\frac{\partial f}{\partial x}$:
+$\frac{\partial f}{\partial x} = 3x^2 + y^2e^x$
+\item Calculamos $\frac{\partial f}{\partial y}$:
+$\frac{\partial f}{\partial y} = 2ye^x$
+\end{enumerate}
+
+\section{Gradiente e plano tangente}
+
+\subsection{Exemplo 5}
+\textbf{Problema:} Encontre o gradiente de $f(x,y,z) = x^2y + yz^2 - 3xz$
+
+\textbf{Solução:}
+\begin{enumerate}
+\item Calculamos as derivadas parciais:
+$\frac{\partial f}{\partial x} = 2xy - 3z$
+$\frac{\partial f}{\partial y} = x^2 + z^2$
+$\frac{\partial f}{\partial z} = 2yz - 3x$
+\item Formamos o gradiente:
+$\nabla f = (2xy - 3z, x^2 + z^2, 2yz - 3x)$
+\end{enumerate}
+
+\subsection{Exemplo 6}
+\textbf{Problema:} Encontre a equação do plano tangente à superfície $z = x^2 + y^2$ no ponto (1, 2, 5)
+
+\textbf{Solução:}
+\begin{enumerate}
+\item Calculamos as derivadas parciais:
+$\frac{\partial z}{\partial x} = 2x$
+$\frac{\partial z}{\partial y} = 2y$
+\item Avaliamos as derivadas no ponto (1, 2, 5):
+$\frac{\partial z}{\partial x}(1,2) = 2$
+$\frac{\partial z}{\partial y}(1,2) = 4$
+\item A equação do plano tangente é:
+$z - 5 = 2(x - 1) + 4(y - 2)$
+\end{enumerate}
+
+\section{Otimização}
+
+\subsection{Exemplo 7}
+\textbf{Problema:} Encontre os pontos críticos de $f(x,y) = x^2 + y^2 - 2x - 4y$
+
+\textbf{Solução:}
+\begin{enumerate}
+\item Calculamos as derivadas parciais:
+$\frac{\partial f}{\partial x} = 2x - 2$
+$\frac{\partial f}{\partial y} = 2y - 4$
+\item Igualamos as derivadas parciais a zero:
+$2x - 2 = 0 \implies x = 1$
+$2y - 4 = 0 \implies y = 2$
+\item O ponto crítico é (1, 2).
+\end{enumerate}
+
+\subsection{Exemplo 8}
+\textbf{Problema:} Encontre os extremos locais de $f(x,y) = x^2 + xy + y^2 - 3x - 3y$
+
+\textbf{Solução:}
+\begin{enumerate}
+\item Calculamos as derivadas parciais:
+$\frac{\partial f}{\partial x} = 2x + y - 3$
+$\frac{\partial f}{\partial y} = x + 2y - 3$
+\item Igualamos as derivadas parciais a zero:
+$2x + y - 3 = 0$
+$x + 2y - 3 = 0$
+\item Resolvemos o sistema:
+$x = y = 1$
+\item Calculamos a matriz Hessiana:
+$H = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$
+\item Como $\det(H) = 3 > 0$ e $\frac{\partial^2 f}{\partial x^2} = 2 > 0$, o ponto (1, 1) é um mínimo local.
+\end{enumerate}
+
+\section{Multiplicadores de Lagrange}
+
+\subsection{Exemplo 9}
+\textbf{Problema:} Maximize $f(x,y) = xy$ sujeito à restrição $x^2 + y^2 = 1$
+
+\textbf{Solução:}
+\begin{enumerate}
+\item Formamos a função Lagrangiana:
+$L(x,y,\lambda) = xy - \lambda(x^2 + y^2 - 1)$
+\item Calculamos as derivadas parciais:
+$\frac{\partial L}{\partial x} = y - 2\lambda x = 0$
+$\frac{\partial L}{\partial y} = x - 2\lambda y = 0$
+$\frac{\partial L}{\partial \lambda} = x^2 + y^2 - 1 = 0$
+\item Resolvemos o sistema:
+$x = y = \frac{1}{\sqrt{2}}$ ou $x = y = -\frac{1}{\sqrt{2}}$
+\item O máximo ocorre em $(\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})$ e o mínimo em $(-\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}})$.
+\end{enumerate}
+
+\subsection{Exemplo 10}
+\textbf{Problema:} Minimize $f(x,y) = x^2 + y^2$ sujeito à restrição $x + y = 1$
+
+\textbf{Solução:}
+\begin{enumerate}
+\item Formamos a função Lagrangiana:
+$L(x,y,\lambda) = x^2 + y^2 - \lambda(x + y - 1)$
+\item Calculamos as derivadas parciais:
+$\frac{\partial L}{\partial x} = 2x - \lambda = 0$
+$\frac{\partial L}{\partial y} = 2y - \lambda = 0$
+$\frac{\partial L}{\partial \lambda} = x + y - 1 = 0$
+\item Resolvemos o sistema:
+$x = y = \frac{1}{2}$
+\item O ponto $(\frac{1}{2}, \frac{1}{2})$ é o mínimo da função sujeito à restrição.
+\end{enumerate}
