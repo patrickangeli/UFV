@@ -1,0 +1,17 @@
+// Coloque as suas associações de teclas neste arquivo para substituir os padrões
+[
+  {
+    "key": "ctrl+alt+b",
+    "command": "latex-workshop.build"
+  },
+  {
+    "key": "ctrl+alt+s",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "rclone sync /workspaces/UFV drive:/Material_UFV/UFV/ && git add . && git commit -m 'Atualização automática' && git push \u000D"
+    }
+  }
+]
+
+  
+  
